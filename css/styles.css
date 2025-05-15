@@ -1,0 +1,89 @@
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main {
+  padding: 1rem 10%;
+}
+
+header {
+  text-align: center;
+}
+
+header p {
+  margin: 0.5rem;
+}
+
+/* Set Table Border */
+table {
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+/* Set Row Border */
+td {
+  border-top: 1px solid gray;
+}
+
+/* Alternate row color */
+tr:nth-child(even) {
+  background-color: gainsboro;
+}
+
+/* Padding inside cells */
+th, td {
+  padding: 10px;
+}
+
+/* Text Alignment */
+th, td {
+  text-align: left;
+}
+
+/* Header Row Styling */
+th {
+  background-color: cadetblue;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Hover effects for row */
+tr:hover {
+  background-color:lightblue;
+}
+
+/* Rounded Corners */
+table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Center each section in parent with max-width */
+section {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Full Width Table */
+table {
+  width: 100%;
+}
+
+/* Fixed Column Widths */
+th:nth-child(1) {
+  width: 25%;
+}
+th:nth-child(2) {
+  width: 25%;
+}
+
+/* Table sub-section row styling */
+td[colspan="3"] {
+  background-color: cadetblue;
+  color: white;
+  font-weight: bold;
+  font-size: .75rem;
+  text-align:center;
+  padding: 5px;
+  border-top: 5px solid white; /* Add white space for sub title separation */
+}

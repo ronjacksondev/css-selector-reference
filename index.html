@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CSS Selector Reference</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>CSS Selector Reference</h1>
+    <p>This is a reference list for some of the selectors used in HTML styling.</p>
+    <p>Disclaimer: This document was made while learning and may contain mistakes.</p>
+  </header>
+  <main>
+    <section>
+      <h2>Simple Selectors</h2>
+      <p>Simple selectors are the building blocks of css selector syntax.</p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Example</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Universal Selector</td>
+            <td>*</td>
+            <td>Selects all elements on the page</td>
+          </tr>
+          <tr>
+            <td>Type Selector</td>
+            <td>div</td>
+            <td>Selects all elements of the defined type.</td>
+          </tr>
+          <tr>
+            <td>Attribute Selector</td>
+            <td>[href]</td>
+            <td>Selects all elements with the defined attribute.</td>
+          </tr>
+          <tr>
+            <td>Class Selector</td>
+            <td>.example</td>
+            <td>Selects all elements with the defined class name.</td>
+          </tr>
+          <tr>
+            <td>ID Selector</td>
+            <td>#example</td>
+            <td>Selects the element with the defined ID.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Selector list</h2>
+      <p>Any selectors can be grouped together in a list to share style among several selectors.</p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Example</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic Selector List</td>
+            <td>h1, h2, h3</td>
+            <td>Selects all h1 or h2 or h3 elements.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Compound Selectors</h2>
+      <p>Compound selectors are simple selectors that are concatenated directly together.</p>
+      <p>Below are a few examples of possible combinations.</p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Example</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Type and Attribute</td>
+            <td>input[type="text"]</td>
+            <td>Selects all input elements with the type attribute and with a value set to "text."</td>
+          </tr>
+          <tr>
+            <td>Type and Class</td>
+            <td>div.special</td>
+            <td>Selects all div elements with the .special class</td>
+          </tr>
+          <tr>
+            <td>Attribute and Class</td>
+            <td>[src].special</td>
+            <td>Selects all elements with an src attribute and the .special class.</td>
+          </tr>
+          <tr>
+            <td>Attribute and Attribute</td>
+            <td>[width][height]</td>
+            <td>Selects all elements with a width and height attribute.</td>
+          </tr>
+          <tr>
+            <td>Class and Class</td>
+            <td>.special.attention</td>
+            <td>Selects all elements with a .special class and a .attention class</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Complex Selectors</h2>
+      <p>Complex selectors are a cobmination of 2 or more selectors joined by a combinator (like an operator).</p>
+      <p>This is essentially a list of combinators.</p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Example</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Descendant Combinator</td>
+            <td>p span</td>
+            <td>Selects all span elements that are descendants of p elements.</td>
+          </tr>
+          <tr>
+            <td>Child Combinator</td>
+            <td>p > span</td>
+            <td>Selects all span elements that are a direct child of a p element.</td>
+          </tr>
+          <tr>
+            <td>Next-sibling Combinator</td>
+            <td>p + span</td>
+            <td>Selects all span elements that immediately follow a p element sibling.</td>
+          </tr>
+          <tr>
+            <td>Subsequent-sibling Combinator</td>
+            <td>p ~ span</td>
+            <td>Selects all span elements that have a preceding p element sibling.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Pseudo Selectors</h2>
+      <p>Pseudo selectors select elements by either their state or by other information that is hard to express with simple selectors.</p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Example</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="3">User Action</td>
+          </tr>
+          <tr>
+            <td>:hover</td>
+            <td>a:hover</td>
+            <td>Selects all anchor elements when the pointer hovers over them.</td>
+          </tr>
+          <tr>
+            <td>:focus</td>
+            <td>input:focus</td>
+            <td>Selects the input that has screen focus.</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td colspan="3">Input</td>
+          </tr>
+          <tr>
+            <td>:checked</td>
+            <td>input:checked</td>
+            <td>Selects all input elements that are checked = true</td>
+          </tr>
+          <tr>
+            <td>:disabled</td>
+            <td>input:disabled</td>
+            <td>Selects all input elements that are disabled = true</td>
+          </tr>
+          <tr>
+            <td>:enabled</td>
+            <td>input:enabled</td>
+            <td>Selects all input elements that are disabled = false</td>
+          </tr>
+          <tr>
+            <td>:required</td>
+            <td>input:required</td>
+            <td>Selects all input elements that are required = true</td>
+          </tr>
+          <tr>
+            <td>:optional</td>
+            <td>input:optional</td>
+            <td>Selects all input elements that are required = false</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td colspan="3">Tree Structure</td>
+          </tr>
+          <tr>
+            <td>:root</td>
+            <td>:root</td>
+            <td>Selects the root element, usually &lt;html&gt;.<br>Often used in ruleset to store css variable
+              declarations.</td>
+          </tr>
+          <tr>
+            <td>:nth-child(n)</td>
+            <td>tr:nth-child(even)</td>
+            <td>Selects every other table row.</td>
+          </tr>
+          <tr>
+            <td>:first-child</td>
+            <td>tr:first-child</td>
+            <td>Selects the first table row.</td>
+          </tr>
+          <tr>
+            <td>:last-child</td>
+            <td>tr:last-child</td>
+            <td>Selects teh last table row</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td colspan="3">Location</td>
+          </tr>
+          <tr>
+            <td>:visited</td>
+            <td>a:visited</td>
+            <td>Selects all anchor links that the browser has visited.</td>
+          </tr>
+          <tr>
+            <td>:any-link</td>
+            <td>a:any-link</td>
+            <td>Selects all anchor tags with an href.<br>Equivalent to :is(:link, :visited).</td>
+          </tr>
+        </tbody>
+        <tbod>
+          <tr>
+            <td colspan="3">Functional</td>
+          </tr>
+          <tr>
+            <td>:is()</td>
+            <td>:is(ul, ol)</td>
+            <td>Selects all elements that are an ul or ol.<br>Allegedly can be faster than a selector list (ul, ol {...}  in complex selectors.</td>
+          </tr>
+          <tr>
+            <td>:where()</td>
+            <td>:where(ul, ol)</td>
+            <td>Selects all elements that are an ul or ol.<br>Same as :is() but :where() has zero specificity.</td>
+          </tr>
+          <tr>
+            <td>:not()</td>
+            <td>:not(p)</td>
+            <td>Selects any element that is not a p element.</td>
+          </tr>
+          <tr>
+            <td>:has()</td>
+            <td>p:has(span.special)</td>
+            <td>Selects any p element that contains a span with .special</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Pseudo Elements</h2>
+      <p>Pseudo elements select virtual components of an element.</p>
+      <p>Pseudo elements allow adding content and styling.</p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Example</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>::before</td>
+            <td>p::before</td>
+            <td>Selects a virtual element before any p element.</td>
+          </tr>
+          <tr>
+            <td>::after</td>
+            <td>p::after</td>
+            <td>Selects a virtual element after any p element.</td>
+          </tr>
+          <tr>
+            <td>::first-letter</td>
+            <td>p::first-letter</td>
+            <td>Selects the first letter of any p element.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+
+</html>
